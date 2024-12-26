@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun Facts Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Personal Fun Facts Generator</h1>
+
+      <div class="fact-display" id="factDisplay">
+        Click "Generate Fact" to start!
+      </div>
+
+      <button onclick="generateFact()">Generate Fact</button>
+
+      <div class="share-buttons">
+        <button id="twitterBtn" onclick="shareOnTwitter()">
+          Share on Twitter
+        </button>
+        <button id="downloadBtn" onclick="downloadScreenshot()">
+          Download Screenshot
+        </button>
+      </div>
+
+      <div class="add-fact">
+        <h3>Add Your Own Fact</h3>
+        <input type="text" id="newFact" placeholder="Enter your fun fact" />
+        <button onclick="addFact()">Add Fact</button>
+      </div>
+    </div>
+
+    <!-- Custom Popup -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2>Success!</h2>
+        <p>Your fact has been added successfully!</p>
+        <button onclick="closePopup()">OK</button>
+      </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>
